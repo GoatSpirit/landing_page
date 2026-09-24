@@ -86,13 +86,3 @@ npm test
 - Layout optimized for desktop, tablet, and mobile screens
 
 
-## Deployment
-
-The project is configured for GitHub Pages deployment.
-
-```bash
-npm run deploy
-```
-
-After deployment, update the Live Demo link at the top of this README with the public GitHub Pages URL.
-
