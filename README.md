@@ -65,11 +65,7 @@ npm start
 npm run build
 ```
 
-### 5. Run checks
 
-```bash
-npm test
-```
 
 ## Features
 
