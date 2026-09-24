@@ -108,6 +108,7 @@ textarea {
 
   &__actions {
     display: flex;
+    position: relative;
     align-items: center;
     gap: 58px;
   }
@@ -121,19 +122,33 @@ textarea {
     text-transform: uppercase;
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
     transition: opacity $duration ease;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.25;
 
-    span:nth-child(3) {
+    .header__phone-museum:nth-of-type(2) {
       margin-top: 8px;
     }
   }
 
+  &__phone-link {
+    transition: color $duration ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $accent;
+    }
+  }
+
+  &__actions:focus-within &__phone-details,
+  &__actions:hover &__phone-details,
   &__actions:has(.icon-link--phone:hover) &__phone-details,
   &__actions:has(.icon-link--phone:focus-visible) &__phone-details {
     opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
   }
 
   &__title {
@@ -469,6 +484,11 @@ textarea {
 }
 
 .explore {
+  &__title {
+    max-width: 390px;
+    margin-inline: auto;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
